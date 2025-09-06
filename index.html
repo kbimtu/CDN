@@ -62,3 +62,675 @@ img {
     </div>
   </div>
 </div>
+
+<html>
+	<head>
+		<style type="text/css">
+			.logo-wall {
+              margin-top:50px;
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+
+		@keyframes fadeIn {
+		  0% {
+		    opacity: 0;
+		  }
+		  25% {
+		    opacity: 0;
+		    transform: scale(0.9);
+		  }
+		  100% {
+		    opacity: 1;
+		    transform: scale(1);
+		  }
+		}
+		@keyframes fadeOut {
+		  0% {
+		    opacity: 1;
+		    transform: scale(1);
+		  }
+		  75% {
+		    opacity: 0;
+		    transform: scale(0.9);
+		  }
+		  100% {
+		    opacity: 0;
+		  }
+		}
+		.logo-container {
+		  padding: 15px;
+		  overflow: hidden;
+		  height: 100px;
+		  max-width: 180px;
+		  position: relative;
+		}
+
+		.logo-container img {
+		  width: 100%;
+		}
+
+		@media screen and (min-width: 550px) {
+		  .logo-container {
+		    width: calc(25% - 10px);
+		  }
+		}
+		@media screen and (min-width: 350px) and (max-width: 549px) {
+		  .logo-container {
+		    width: calc(33% - 10px);
+		  }
+		}
+		@media screen and (max-width: 350px) {
+		  .logo-container {
+		    width: calc(50% - 10px);
+		  }
+		}
+		.logo {
+		  position: absolute;
+		  top: 5px;
+		  left: 5px;
+		  right: 5px;
+		  bottom: 5px;
+		  animation-duration: 0.5s;
+		  animation-fill-mode: both;
+		  animation-timing-function: ease-in-out;
+		}
+
+		.logo-back {
+		  opacity: 0;
+		}
+
+		.show-front .logo-front,
+		.show-back .logo-back {
+		  animation-name: fadeIn;
+		}
+
+		:not(.initial).show-front .logo-back,
+		.show-back .logo-front {
+		  animation-name: fadeOut;
+		}
+
+		@media screen and (min-width: 550px) {
+		  .show-back #logo-wall-front-0,
+		  .show-front #logo-wall-back-0 {
+		    animation-delay: 0ms;
+		  }
+
+		  .show-front #logo-wall-front-0,
+		  .show-back #logo-wall-back-0 {
+		    animation-delay: 200ms;
+		  }
+
+		  .show-back #logo-wall-front-1,
+		  .show-front #logo-wall-back-1 {
+		    animation-delay: 125ms;
+		  }
+
+		  .show-front #logo-wall-front-1,
+		  .show-back #logo-wall-back-1 {
+		    animation-delay: 325ms;
+		  }
+
+		  .show-back #logo-wall-front-2,
+		  .show-front #logo-wall-back-2 {
+		    animation-delay: 250ms;
+		  }
+
+		  .show-front #logo-wall-front-2,
+		  .show-back #logo-wall-back-2 {
+		    animation-delay: 450ms;
+		  }
+
+		  .show-back #logo-wall-front-3,
+		  .show-front #logo-wall-back-3 {
+		    animation-delay: 375ms;
+		  }
+
+		  .show-front #logo-wall-front-3,
+		  .show-back #logo-wall-back-3 {
+		    animation-delay: 575ms;
+		  }
+
+		  .show-back #logo-wall-front-4,
+		  .show-front #logo-wall-back-4 {
+		    animation-delay: 100ms;
+		  }
+
+		  .show-front #logo-wall-front-4,
+		  .show-back #logo-wall-back-4 {
+		    animation-delay: 300ms;
+		  }
+
+		  .show-back #logo-wall-front-5,
+		  .show-front #logo-wall-back-5 {
+		    animation-delay: 225ms;
+		  }
+
+		  .show-front #logo-wall-front-5,
+		  .show-back #logo-wall-back-5 {
+		    animation-delay: 425ms;
+		  }
+
+		  .show-back #logo-wall-front-6,
+		  .show-front #logo-wall-back-6 {
+		    animation-delay: 350ms;
+		  }
+
+		  .show-front #logo-wall-front-6,
+		  .show-back #logo-wall-back-6 {
+		    animation-delay: 550ms;
+		  }
+
+		  .show-back #logo-wall-front-7,
+		  .show-front #logo-wall-back-7 {
+		    animation-delay: 475ms;
+		  }
+
+		  .show-front #logo-wall-front-7,
+		  .show-back #logo-wall-back-7 {
+		    animation-delay: 675ms;
+		  }
+
+		  .show-back #logo-wall-front-8,
+		  .show-front #logo-wall-back-8 {
+		    animation-delay: 200ms;
+		  }
+
+		  .show-front #logo-wall-front-8,
+		  .show-back #logo-wall-back-8 {
+		    animation-delay: 400ms;
+		  }
+
+		  .show-back #logo-wall-front-9,
+		  .show-front #logo-wall-back-9 {
+		    animation-delay: 325ms;
+		  }
+
+		  .show-front #logo-wall-front-9,
+		  .show-back #logo-wall-back-9 {
+		    animation-delay: 525ms;
+		  }
+
+		  .show-back #logo-wall-front-10,
+		  .show-front #logo-wall-back-10 {
+		    animation-delay: 450ms;
+		  }
+
+		  .show-front #logo-wall-front-10,
+		  .show-back #logo-wall-back-10 {
+		    animation-delay: 650ms;
+		  }
+
+		  .show-back #logo-wall-front-11,
+		  .show-front #logo-wall-back-11 {
+		    animation-delay: 575ms;
+		  }
+
+		  .show-front #logo-wall-front-11,
+		  .show-back #logo-wall-back-11 {
+		    animation-delay: 775ms;
+		  }
+
+		  .show-back #logo-wall-front-12,
+		  .show-front #logo-wall-back-12 {
+		    animation-delay: 300ms;
+		  }
+
+		  .show-front #logo-wall-front-12,
+		  .show-back #logo-wall-back-12 {
+		    animation-delay: 500ms;
+		  }
+
+		  .show-back #logo-wall-front-13,
+		  .show-front #logo-wall-back-13 {
+		    animation-delay: 425ms;
+		  }
+
+		  .show-front #logo-wall-front-13,
+		  .show-back #logo-wall-back-13 {
+		    animation-delay: 625ms;
+		  }
+
+		  .show-back #logo-wall-front-14,
+		  .show-front #logo-wall-back-14 {
+		    animation-delay: 550ms;
+		  }
+
+		  .show-front #logo-wall-front-14,
+		  .show-back #logo-wall-back-14 {
+		    animation-delay: 750ms;
+		  }
+
+		  .show-back #logo-wall-front-15,
+		  .show-front #logo-wall-back-15 {
+		    animation-delay: 675ms;
+		  }
+
+		  .show-front #logo-wall-front-15,
+		  .show-back #logo-wall-back-15 {
+		    animation-delay: 875ms;
+		  }
+		}
+		@media screen and (min-width: 400px) and (max-width: 549px) {
+		  .show-back #logo-wall-front-0,
+		  .show-front #logo-wall-back-0 {
+		    animation-delay: 0ms;
+		  }
+
+		  .show-front #logo-wall-front-0,
+		  .show-back #logo-wall-back-0 {
+		    animation-delay: 200ms;
+		  }
+
+		  .show-back #logo-wall-front-1,
+		  .show-front #logo-wall-back-1 {
+		    animation-delay: 133.3333333333ms;
+		  }
+
+		  .show-front #logo-wall-front-1,
+		  .show-back #logo-wall-back-1 {
+		    animation-delay: 333.3333333333ms;
+		  }
+
+		  .show-back #logo-wall-front-2,
+		  .show-front #logo-wall-back-2 {
+		    animation-delay: 266.6666666667ms;
+		  }
+
+		  .show-front #logo-wall-front-2,
+		  .show-back #logo-wall-back-2 {
+		    animation-delay: 466.6666666667ms;
+		  }
+
+		  .show-back #logo-wall-front-3,
+		  .show-front #logo-wall-back-3 {
+		    animation-delay: 100ms;
+		  }
+
+		  .show-front #logo-wall-front-3,
+		  .show-back #logo-wall-back-3 {
+		    animation-delay: 300ms;
+		  }
+
+		  .show-back #logo-wall-front-4,
+		  .show-front #logo-wall-back-4 {
+		    animation-delay: 233.3333333333ms;
+		  }
+
+		  .show-front #logo-wall-front-4,
+		  .show-back #logo-wall-back-4 {
+		    animation-delay: 433.3333333333ms;
+		  }
+
+		  .show-back #logo-wall-front-5,
+		  .show-front #logo-wall-back-5 {
+		    animation-delay: 366.6666666667ms;
+		  }
+
+		  .show-front #logo-wall-front-5,
+		  .show-back #logo-wall-back-5 {
+		    animation-delay: 566.6666666667ms;
+		  }
+
+		  .show-back #logo-wall-front-6,
+		  .show-front #logo-wall-back-6 {
+		    animation-delay: 200ms;
+		  }
+
+		  .show-front #logo-wall-front-6,
+		  .show-back #logo-wall-back-6 {
+		    animation-delay: 400ms;
+		  }
+
+		  .show-back #logo-wall-front-7,
+		  .show-front #logo-wall-back-7 {
+		    animation-delay: 333.3333333333ms;
+		  }
+
+		  .show-front #logo-wall-front-7,
+		  .show-back #logo-wall-back-7 {
+		    animation-delay: 533.3333333333ms;
+		  }
+
+		  .show-back #logo-wall-front-8,
+		  .show-front #logo-wall-back-8 {
+		    animation-delay: 466.6666666667ms;
+		  }
+
+		  .show-front #logo-wall-front-8,
+		  .show-back #logo-wall-back-8 {
+		    animation-delay: 666.6666666667ms;
+		  }
+
+		  .show-back #logo-wall-front-9,
+		  .show-front #logo-wall-back-9 {
+		    animation-delay: 300ms;
+		  }
+
+		  .show-front #logo-wall-front-9,
+		  .show-back #logo-wall-back-9 {
+		    animation-delay: 500ms;
+		  }
+
+		  .show-back #logo-wall-front-10,
+		  .show-front #logo-wall-back-10 {
+		    animation-delay: 433.3333333333ms;
+		  }
+
+		  .show-front #logo-wall-front-10,
+		  .show-back #logo-wall-back-10 {
+		    animation-delay: 633.3333333333ms;
+		  }
+
+		  .show-back #logo-wall-front-11,
+		  .show-front #logo-wall-back-11 {
+		    animation-delay: 566.6666666667ms;
+		  }
+
+		  .show-front #logo-wall-front-11,
+		  .show-back #logo-wall-back-11 {
+		    animation-delay: 766.6666666667ms;
+		  }
+
+		  .show-back #logo-wall-front-12,
+		  .show-front #logo-wall-back-12 {
+		    animation-delay: 400ms;
+		  }
+
+		  .show-front #logo-wall-front-12,
+		  .show-back #logo-wall-back-12 {
+		    animation-delay: 600ms;
+		  }
+
+		  .show-back #logo-wall-front-13,
+		  .show-front #logo-wall-back-13 {
+		    animation-delay: 533.3333333333ms;
+		  }
+
+		  .show-front #logo-wall-front-13,
+		  .show-back #logo-wall-back-13 {
+		    animation-delay: 733.3333333333ms;
+		  }
+
+		  .show-back #logo-wall-front-14,
+		  .show-front #logo-wall-back-14 {
+		    animation-delay: 666.6666666667ms;
+		  }
+
+		  .show-front #logo-wall-front-14,
+		  .show-back #logo-wall-back-14 {
+		    animation-delay: 866.6666666667ms;
+		  }
+
+		  .show-back #logo-wall-front-15,
+		  .show-front #logo-wall-back-15 {
+		    animation-delay: 500ms;
+		  }
+
+		  .show-front #logo-wall-front-15,
+		  .show-back #logo-wall-back-15 {
+		    animation-delay: 700ms;
+		  }
+		}
+		@media screen and (max-width: 399px) {
+		  .show-back #logo-wall-front-0,
+		  .show-front #logo-wall-back-0 {
+		    animation-delay: 0ms;
+		  }
+
+		  .show-front #logo-wall-front-0,
+		  .show-back #logo-wall-back-0 {
+		    animation-delay: 200ms;
+		  }
+
+		  .show-back #logo-wall-front-1,
+		  .show-front #logo-wall-back-1 {
+		    animation-delay: 100ms;
+		  }
+
+		  .show-front #logo-wall-front-1,
+		  .show-back #logo-wall-back-1 {
+		    animation-delay: 350ms;
+		  }
+
+		  .show-back #logo-wall-front-2,
+		  .show-front #logo-wall-back-2 {
+		    animation-delay: 100ms;
+		  }
+
+		  .show-front #logo-wall-front-2,
+		  .show-back #logo-wall-back-2 {
+		    animation-delay: 300ms;
+		  }
+
+		  .show-back #logo-wall-front-3,
+		  .show-front #logo-wall-back-3 {
+		    animation-delay: 200ms;
+		  }
+
+		  .show-front #logo-wall-front-3,
+		  .show-back #logo-wall-back-3 {
+		    animation-delay: 450ms;
+		  }
+
+		  .show-back #logo-wall-front-4,
+		  .show-front #logo-wall-back-4 {
+		    animation-delay: 200ms;
+		  }
+
+		  .show-front #logo-wall-front-4,
+		  .show-back #logo-wall-back-4 {
+		    animation-delay: 400ms;
+		  }
+
+		  .show-back #logo-wall-front-5,
+		  .show-front #logo-wall-back-5 {
+		    animation-delay: 300ms;
+		  }
+
+		  .show-front #logo-wall-front-5,
+		  .show-back #logo-wall-back-5 {
+		    animation-delay: 550ms;
+		  }
+
+		  .show-back #logo-wall-front-6,
+		  .show-front #logo-wall-back-6 {
+		    animation-delay: 300ms;
+		  }
+
+		  .show-front #logo-wall-front-6,
+		  .show-back #logo-wall-back-6 {
+		    animation-delay: 500ms;
+		  }
+
+		  .show-back #logo-wall-front-7,
+		  .show-front #logo-wall-back-7 {
+		    animation-delay: 400ms;
+		  }
+
+		  .show-front #logo-wall-front-7,
+		  .show-back #logo-wall-back-7 {
+		    animation-delay: 650ms;
+		  }
+
+		  .show-back #logo-wall-front-8,
+		  .show-front #logo-wall-back-8 {
+		    animation-delay: 400ms;
+		  }
+
+		  .show-front #logo-wall-front-8,
+		  .show-back #logo-wall-back-8 {
+		    animation-delay: 600ms;
+		  }
+
+		  .show-back #logo-wall-front-9,
+		  .show-front #logo-wall-back-9 {
+		    animation-delay: 500ms;
+		  }
+
+		  .show-front #logo-wall-front-9,
+		  .show-back #logo-wall-back-9 {
+		    animation-delay: 750ms;
+		  }
+
+		  .show-back #logo-wall-front-10,
+		  .show-front #logo-wall-back-10 {
+		    animation-delay: 500ms;
+		  }
+
+		  .show-front #logo-wall-front-10,
+		  .show-back #logo-wall-back-10 {
+		    animation-delay: 700ms;
+		  }
+
+		  .show-back #logo-wall-front-11,
+		  .show-front #logo-wall-back-11 {
+		    animation-delay: 600ms;
+		  }
+
+		  .show-front #logo-wall-front-11,
+		  .show-back #logo-wall-back-11 {
+		    animation-delay: 850ms;
+		  }
+
+		  .show-back #logo-wall-front-12,
+		  .show-front #logo-wall-back-12 {
+		    animation-delay: 600ms;
+		  }
+
+		  .show-front #logo-wall-front-12,
+		  .show-back #logo-wall-back-12 {
+		    animation-delay: 800ms;
+		  }
+
+		  .show-back #logo-wall-front-13,
+		  .show-front #logo-wall-back-13 {
+		    animation-delay: 700ms;
+		  }
+
+		  .show-front #logo-wall-front-13,
+		  .show-back #logo-wall-back-13 {
+		    animation-delay: 950ms;
+		  }
+
+		  .show-back #logo-wall-front-14,
+		  .show-front #logo-wall-back-14 {
+		    animation-delay: 700ms;
+		  }
+
+		  .show-front #logo-wall-front-14,
+		  .show-back #logo-wall-back-14 {
+		    animation-delay: 900ms;
+		  }
+
+		  .show-back #logo-wall-front-15,
+		  .show-front #logo-wall-back-15 {
+		    animation-delay: 800ms;
+		  }
+
+		  .show-front #logo-wall-front-15,
+		  .show-back #logo-wall-back-15 {
+		    animation-delay: 1050ms;
+		  }
+		}
+
+		</style>
+	</head>
+
+	<body>
+
+		<div id="logo-wall">
+
+
+	</body>
+	<script type="text/javascript">
+		var imgSources = [
+		  "https://www.dropbox.com/s/v555jww72h573qe/Google%20Logo.png?raw=1", 
+  "https://www.dropbox.com/s/ivgs0k0vqnyil3l/Amazon%20Logo.png?raw=1",
+  "https://www.dropbox.com/s/sz3v3lipz1v1rft/LinkedIn%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/x3n0upg8r69wk4c/Cisco%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/zofa8l2y1xum0hb/Microsoft%20Logo.png?raw=1",
+  "https://www.dropbox.com/s/v2cj0gx1etsugzp/Disney%20Mouse%20Logo.png?raw=1", "https://www.dropbox.com/s/0skl0g1lpoiny9n/NBCUniversal.png?raw=1", "https://www.dropbox.com/s/fx6lo328f3m4u6a/Deloitte%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/m9lfyorvx6l70o5/EY%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/00md72f8skm3m20/JPMorgan%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/lbh5nfsadfz9znh/PWC%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/jp4q49ndbp0vslx/Facebook%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/k42uc45hqsdf5iv/Goldman%20Sachs%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/uvhm0x71pjfjwt2/Macys%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/ti7alintqw12jsa/Snapchat%20Logo.png?raw=1",
+  "https://www.dropbox.com/s/h50nvkl5bx3nabx/Slack%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/n4aox6y4kont72p/Adobe%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/9dcyx3wve9i86wg/Airbnb%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/b4boso0odw4g4ci/Autodesk%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/5xyhcscsoq5dtvn/Indeed%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/ddfukprinq15lp9/RobinhoodLogo.png?raw=1",
+ "https://www.dropbox.com/s/lue1f80xivic3jv/Lyft%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/ftma8tketbnu0et/Intel%20Logo.png?raw=1",
+  "https://www.dropbox.com/s/ukxuka836pto93z/KPMG%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/uqj9d4eohup5pst/URx%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/bzdzx8qgsd98547/Squar%20Milner%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/1kuxg4xiqw3zhnm/Workday%20Logo.png?raw=1", "https://www.dropbox.com/s/3ewxun3jbmneewk/Salesforce%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/8vh6093b2hibmvf/NASA%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/0gt71zyj51xpi5c/Hulu%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/15uzcwi9vlt9b7x/Twitter%20Logo.png?raw=1",
+ "https://www.dropbox.com/s/3dv6ioi26wu9xe4/TEDX%20Logo.png?raw=1"
+		];
+		var frontImgSources = imgSources.slice(0, 16);
+		var backImgSources = imgSources.slice(16, 32);
+
+		var wall = document.createElement("div");
+		wall.classList.add("logo-wall");
+		wall.classList.add("show-front");
+		wall.classList.add("initial");
+
+		var logos = frontImgSources.map(function (img, i) {
+		  return { front: img, back: backImgSources[i] };
+		});
+
+		logos.forEach(function (logo, i) {
+		  var container = document.createElement("div");
+		  container.classList.add("logo-container");
+
+		  var frontDiv = document.createElement("div");
+		  frontDiv.id = "logo-wall-front-" + i;
+		  frontDiv.classList.add("logo");
+		  frontDiv.classList.add("logo-front");
+		  var frontImg = document.createElement("img");
+		  frontImg.src = logo.front;
+		  frontDiv.appendChild(frontImg);
+		  container.appendChild(frontDiv);
+
+		  if (logo.back) {
+		    var backDiv = document.createElement("div");
+		    backDiv.id = "logo-wall-back-" + i;
+		    backDiv.classList.add("logo");
+		    backDiv.classList.add("logo-back");
+		    var backImg = document.createElement("img");
+		    backImg.src = logo.back;
+		    backDiv.appendChild(backImg);
+		    container.appendChild(backDiv);
+		  }
+
+		  wall.appendChild(container);
+		});
+
+		document.getElementById("logo-wall").appendChild(wall);
+
+		window.setTimeout(function () {
+		  document.querySelector(".logo-wall").classList.remove("initial");
+		}, 5000);
+
+		window.setInterval(function () {
+		  var logoWall = document.querySelector(".logo-wall");
+		  if (logoWall.classList.contains("show-front")) {
+		    logoWall.classList.remove("show-front");
+		    logoWall.classList.add("show-back");
+		  } else {
+		    logoWall.classList.remove("show-back");
+		    logoWall.classList.add("show-front");
+		  }
+		}, 5000);
+
+	</script>
+</html>
